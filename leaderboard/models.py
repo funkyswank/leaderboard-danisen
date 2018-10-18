@@ -27,7 +27,7 @@ class Matchlog(models.Model):
 	loser = models.ForeignKey(Player, on_delete=models.CASCADE, related_name='loser')
 	match_date = models.DateTimeField(default=timezone.now)
 	def __str__(self):
-		return str(self.winner)+" beat "+str(self.loser)+" on "+str(self.match_date)
+		return str(self.winner)+" - "+str(self.winner.player_character)+" beat "+str(self.loser)+" - "+str(self.loser.player_character)+" on "+str(self.match_date)
 	@transaction.atomic
 	def save(self):
 		if self.pk is None:

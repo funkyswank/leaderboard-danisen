@@ -5,5 +5,5 @@ from leaderboard.views import players
 
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
-	url(r'^players/', players)
+	url('', players)
 ]
