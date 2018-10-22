@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!1#!_)7=vj^y7xi&m@z$$wi1w8p&%7izj7$*g2a7d#cjipvx!p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*.freeplayhof.com','localhost']
+ALLOWED_HOSTS = ['*.freeplayhof.com','localhost','0.0.0.0','https://fpdanisen.herokuapp.com/']
 
 
 # Application definition
@@ -121,7 +121,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 
 
 django_heroku.settings(locals())
