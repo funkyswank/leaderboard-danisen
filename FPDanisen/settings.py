@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*.freeplayhof.com','localhost','0.0.0.0','https://fpdanisen.he
 INSTALLED_APPS = [
     'leaderboard.apps.LeaderboardConfig',
 	'django_tables2',
-	'django_filters',
+	'django_filter',
 	'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
