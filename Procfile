@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn FPDanisen.wsgi --log-file
+web: waitress-serve --listen=*:$PORT FPDanisen.wsgi:leaderboard
