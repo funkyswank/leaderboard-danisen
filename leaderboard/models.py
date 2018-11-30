@@ -1,6 +1,7 @@
 import datetime
 from django.db import models, transaction
 from django.utils import timezone
+from django.db.models import F
 
 class Fighters(models.Model):
 	fighter = models.CharField(max_length=20)
@@ -46,3 +47,5 @@ class Matchlog(models.Model):
 					self.loser.player_rank_id -= 1
 			self.loser.save()
 			return game
+	class Meta:
+		ordering = [F('Player').asc(nulls_last=True)]
